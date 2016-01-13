@@ -33,24 +33,8 @@ h3 {/* settings for headings 3 */
 
 	
 }
-  
-/*----------------header----------------*/
 
-#leftheader {
-	 
-   /* border: 1px solid #b40c00;*/
-	height:140px;
-	width:100%;
-	 
-}
-
-#rightheader {
-  
-display:none;
-
-}
-
-IMG.displayed { /* settings for image in maincontent div to set image in center */
+img.displayed { /* settings for image in maincontent div to set image in center */
 display: block;
 margin-left: auto;
 margin-right: auto;
@@ -58,12 +42,38 @@ margin-right: auto;
 }
 
 
+
+  
+/*----------------header----------------*/
+
+.headerwrapper {
+ 	width: 100%;
+ 
+}
+
+.leftheader {
+	 
+   /* border: 1px solid #b40c00;*/
+	height:140px;
+	width:100%;
+	 
+}
+
+.rightheader {
+  
+display:none;
+
+}
+
+
+
 /*----------------navbar-----------------*/
 
 nav {
+	 
 margin-top: 10px;
 width: 100%;
-height: 10px;
+height: 25px;
 background-color: #fff;
 }
 
@@ -97,31 +107,27 @@ color: #b40c00;
 
 
 /*-----------------body------------------*/
+.wrapper{
+  min-height:367px;
+	max-height:367px;
+ 	width: 100%;
+}
 
-
-
-section.cluster{
-width: 98%;
-height: auto;
-margin: 2% 1% 1% 1%;
  
-}
-
-.unit-group{
-margin-top: 6%;
-/*border: 1px red solid;*/
-}
-
 .mainbar{
-margin: 0 2% 5% 2%;
+/*margin: 0 2% 5% 2%;*/
 /*background-color: #252525;*/
-border-radius: 10px;
-box-shadow: 0px 0px 5px #f0f0f0;
+/*border-radius: 10px;
+box-shadow: 0px 0px 5px #f0f0f0;*/
+}
+
+.sidebar {
+display:none;	
 }
 
 
 .footer{
-	
+	display:none;
 text-align:center;	
 }
 .footer a:link {
@@ -154,28 +160,64 @@ text-align:center;
 /*-----------------everything under here is for screen size above 400px-------------*/
 @media screen and (min-width: 800px) {
 
-/*----------------header----------------*/
-
-#rightheader {
-  
-display:block;
-
+body { /* settings for body */
+	background-color: #dfdfdf; 
+ 
 }
 
+ img, object, embed, video {
+	max-width: 100%;
+  }
+  
+img {
+border: 0px ;
+	 	
+}
 
+img.displayed { /* settings for image in maincontent div to set image in center */
+display: block;
+margin-left: auto;
+margin-right: auto;
+  
+}
+ 
 
+h2 {/* settings for headings 2 */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20pt ; 
+ 	color: #b40c00 ; 
+	font-weight:bold;
+ }
+ 
+ h3 {/* settings for headings 3 */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.9em ;
+ 	color: #e86600 ; 
+	font-weight:bold;
+	font-style:italic;
+	text-align:left;
+ }
 
+/*----------------header----------------*/
 
-/*-----------------Body-------------*/	
-
-#leftheader {
+ .headerwrapper{
+	width: 802px;  
+		height:140px;	 
+	 /*	margin: 0 auto;*/
+	/*	border: 1px solid #000;*/
+ }
+ 
+ 
+.leftheader {
 	width:395px;
 	height:140px;
 	float:left;
 border: 1px solid #b40c00;
 
+
 }
-#rightheader {
+.rightheader {
+	display:block;
 	width: 395px;
 	height: 140px;
 	float: right;
@@ -185,4 +227,60 @@ border: 1px solid #b40c00;
 	vertical-align: top;
 }
 
+
+
+/*----------------navbar-----------------*/
+
+nav {
+  margin-top: 10px;  
+width: 100%;
+height: 25px;
+background-color: #dfdfdf;
+/*border: 1px red solid;*/
+font-size: 1rem;
+ 
+	 
+} 
+
+/*-----------------Body-------------*/	
+
+.wrapper {
+	width: 802px; /* this should be 10px margin for all */
+	/* min-width:806px;*/
+ 
+	margin: 0 auto;
+	min-height:768px;
+}
+
+ 
+.contentwrapper{
+margin-top: 1%;
+/* border: 1px red solid; */
+  
+ float:left;
+ 
+width: 100%;
+ 
+}
+ 
+.mainbar{
+width: 76%;
+ float:left;
+  border: 1px solid #b40c00; 
+ background-color: #F6F6F6;
+  
+}
+
+.sidebar{
+ display:block; 
+width: 20%;
+ background-color: #F6F6F6;
+float:right;
+ border: 1px solid #b40c00;
+}
+
+.footer{
+	 
+	width: 100%;
+}
 }
