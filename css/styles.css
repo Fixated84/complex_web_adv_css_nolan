@@ -1,11 +1,8 @@
 @charset "UTF-8";
 /*-------general css-------*/
-*{
  
- 
-	
-}
- 
+@media screen and (max-width: 799px){
+
 p{
 font-size: 0.7em;
 font-family: Verdana, Arial, Helvetica, sans-serif; 
@@ -160,7 +157,7 @@ text-align:center;
 	
  
  
-
+} 
 
 /*-----------------everything under here is for screen size above 400px-------------*/
 @media screen and (min-width: 800px) {
@@ -346,3 +343,8 @@ float:right;
 	margin-top: 10px;
 }
 }
+
+ 
+
+ 
+
