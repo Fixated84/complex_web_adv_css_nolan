@@ -52,7 +52,7 @@ height:170px;
 .leftheader {
 	 
    /* border: 1px solid #b40c00;*/
-	height:140px;
+	/*height:140px;*/
 	width:100%;
 	 
 }
@@ -70,19 +70,21 @@ display:none;
 nav {
 	 
 margin-top: 10px;
-width: 100%;
+width: 100%;   
 height: 25px;
 background-color: #fff;
 }
 
 nav ul{
-text-align: center;
+	margin: auto;
+	padding: inherit;              /*----------------navbar evil stuff to make it fit on screen-----------------*/
+	text-align: center;
 }
 
 nav ul li{
 display: inline;
 border-right: 1px #000 solid;
-padding: 1px 2%;
+padding: 1px 1%;
 height: 50px;
 
 }
@@ -131,6 +133,7 @@ display:none;
 .footer{
  
 text-align:center;	
+padding-bottom:10px;
 }
 .footer a:link {
 	text-decoration:none;
@@ -409,4 +412,3 @@ text-align:center;
  
 
  
-
