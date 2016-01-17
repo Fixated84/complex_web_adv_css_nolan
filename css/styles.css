@@ -1,6 +1,29 @@
 @charset "UTF-8";
 /*-------general css-------*/
  
+#ss_menu { 
+	width: 500px; 
+	font-size: 0.8em;
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+margin: auto;
+	}
+
+.ss_button { 
+	background-color: #e86600;
+	border-bottom: 1px solid #FFFFFF;
+	cursor: pointer;
+	padding: 5px;
+	color: #FFFFFF;
+	}
+	
+.ss_content {
+	background-color: #F6F6F6;
+	display: none;
+	padding: 5px;
+	} 
+ 
+ 
+ 
 @media screen and (max-width: 799px){
 
 p{
@@ -164,6 +187,10 @@ padding-bottom:10px;
 
 /*-----------------everything under here is for screen size above 400px/800px-------------*/
 @media screen and (min-width: 800px) {
+
+
+
+
 
 body { /* settings for body */
 	background-color: #dfdfdf; 
