@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /*-------general css-------*/
  
+ /*============ Accordion Settings ==============*/
+  
 #ss_menu { 
 	/*width: 500px; */
 	width:90%;
@@ -28,6 +30,8 @@ margin: auto;
 	 margin: 0 auto;  
 	 }
 	 
+/*=========== google maps settings ===============*/	 
+	 
 	  #gmap_canvas img
  {
 	 max-width:none!important;background:none!important
@@ -38,6 +42,14 @@ margin: auto;
 	   width:520px;    		
       }
 
+ 
+a.links:link {text-decoration:none;} 
+a.links:visited {text-decoration:none;}
+a.links:link {color:#b40c00; font-size: 0.9rem;}      
+a.links:visited {color:#e86600;font-size: 0.9rem;}  
+a.links:hover {color:#b40c00; text-decoration:underline;font-size: 0.9rem;}   
+a.links:active {color:#e86600;} 
+ 
  
 @media screen and (max-width: 799px){
 
