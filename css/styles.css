@@ -2,7 +2,8 @@
 /*-------general css-------*/
  
 #ss_menu { 
-	width: 500px; 
+	/*width: 500px; */
+	width:90%;
 	font-size: 0.8em;
 font-family: Verdana, Arial, Helvetica, sans-serif; 
 margin: auto;
@@ -19,7 +20,7 @@ margin: auto;
 .ss_content {
 	background-color: #F6F6F6;
 	display: none;
-	padding: 5px;
+	/*padding: 5px;*/
 	} 
  
  
