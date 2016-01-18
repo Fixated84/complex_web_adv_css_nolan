@@ -1,7 +1,39 @@
 @charset "UTF-8";
+ /*============ design thumbnails Settings ==============*/
+ .thumbnails{
+    
+    padding: 0;
+    list-style: none;
+	width:100%;
+	 margin-top:-3%; 
+ 	 
+  }
+.thumbnails ul{
+ margin-left:-7%;
+display: inline;	
+ 
 
-  
+ 
+}
+.thumbnails ul li{
+	
+display: inline;	
+}
 
+  li.but1 {
+   cursor:pointer;
+   
+   	padding: 2px;
+   font: 10pt Verdana, Arial, Helvetica, sans-serif;
+   }
+
+ li.but2 {
+   cursor:pointer;
+   background:#888888;
+   border: 2px solid #fff ;
+   text-align: center;
+   font: 10pt Verdana, Arial, Helvetica, sans-serif;
+   }
 
 
    /*============ imagemap Settings ==============*/
@@ -9,13 +41,19 @@
 	margin: auto;
 	  position: relative;  
 	 /*position:absolute;*/
+	  
 }
 
 .imagemap ul {
-    margin: 0;
+    
     padding: 0;
     list-style: none;
-		 
+	 
+	 
+	/*margin-top:-19%; ============ layer issue maybe ==============*/
+height:0px;
+width:0px;	 
+  
 }
 .imagemap a {
 	/*position: absolute;*/
@@ -28,7 +66,7 @@
 	height: 15px;
 	text-decoration: none;
 	border: 1px solid transparent;
-			 color:#FFF;
+	  color:#FFF;
  	font-family: Verdana, Arial, Helvetica, sans-serif; /* sets font */
 	font-size: 10px;  /* sets font size */
 	text-align:center; 
@@ -365,18 +403,24 @@ padding-bottom:10px;
 /*-----------------everything under here is for screen size above 400px/800px-------------*/
 @media screen and (min-width: 800px) {
 
+ 
+
+
  /*============ design thumbnails Settings ==============*/
 .thumbnails{
     
     padding: 0;
     list-style: none;
 	width:100%;
-	margin-left:-7%;
-	 
+	 margin-top:-3%; 
+ 	 
   }
 .thumbnails ul{
-	
+ margin-left:-7%;
 display: inline;	
+ 
+
+ 
 }
 .thumbnails ul li{
 	
