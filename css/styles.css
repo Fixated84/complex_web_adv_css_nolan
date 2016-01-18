@@ -1,4 +1,8 @@
 @charset "UTF-8";
+ 
+ 
+@media screen and (max-width: 799px){
+
  /*============ design thumbnails Settings ==============*/
  .thumbnails{
     
@@ -237,9 +241,6 @@ a.links:visited {color:#e86600;font-size: 0.9rem;}
 a.links:hover {color:#b40c00; text-decoration:underline;font-size: 0.9rem;}   
 a.links:active {color:#e86600;} 
  
- 
- 
-@media screen and (max-width: 799px){
 
 p{
 font-size: 0.7em;
@@ -369,7 +370,8 @@ display:none;
 
 
 .footer{
- 
+	font-family: Verdana,  Arial, Helvetica, sans-serif; 
+ font-size: 1rem;
 text-align:center;	
 padding-bottom:10px;
 }
@@ -404,7 +406,244 @@ padding-bottom:10px;
 @media screen and (min-width: 800px) {
 
  
+ /*============ design thumbnails Settings ==============*/
+ .thumbnails{
+    
+    padding: 0;
+    list-style: none;
+	width:100%;
+	 margin-top:-3%; 
+ 	 
+  }
+.thumbnails ul{
+ margin-left:-7%;
+display: inline;	
+ 
 
+ 
+}
+.thumbnails ul li{
+	
+display: inline;	
+}
+
+  li.but1 {
+   cursor:pointer;
+   
+   	padding: 2px;
+   font: 10pt Verdana, Arial, Helvetica, sans-serif;
+   }
+
+ li.but2 {
+   cursor:pointer;
+   background:#888888;
+   border: 2px solid #fff ;
+   text-align: center;
+   font: 10pt Verdana, Arial, Helvetica, sans-serif;
+   }
+
+
+   /*============ imagemap Settings ==============*/
+.imagemap{
+	margin: auto;
+	  position: relative;  
+	 /*position:absolute;*/
+	  
+}
+
+.imagemap ul {
+    
+    padding: 0;
+    list-style: none;
+	 
+	 
+	/*margin-top:-19%; ============ layer issue maybe ==============*/
+height:0px;
+width:0px;	 
+  
+}
+.imagemap a {
+	/*position: absolute;*/
+	position: relative;  
+	display: block;
+ 	background-color:#000;
+	
+     opacity:0.5;
+	width: 15px;
+	height: 15px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	  color:#FFF;
+ 	font-family: Verdana, Arial, Helvetica, sans-serif; /* sets font */
+	font-size: 10px;  /* sets font size */
+	text-align:center; 
+
+ 
+}
+.imagemap  a:hover {
+	opacity:1.0;
+ 	 color:#FFF;
+ 
+ }
+ .imagemap a:focus {
+	opacity:1.0;
+	 	 color:#FFF;
+ 
+ }
+ 
+.imagemap .tip1 a {
+	top: -50px;
+	left: 65px;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top: 1px;
+position: relative;  
+ 	 
+}
+ 
+.imagemap .tip2 a {
+	top: -320px;
+	left: 520px;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top: 1px;
+	position: relative;  
+}
+ .imagemap .tip3 a {
+	top: -190px;
+	left: 365px;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top:1px;
+	position: relative;  
+}
+
+.imagemap .tip4 a {
+	top: -221px;
+	left: 111px;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top:1px;
+	position: relative;  
+
+}
+
+.imagemap .tip5 a {
+	top: -179px;
+	left: 211px;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top:1px;
+	position: relative;  
+
+}
+ 
+.imagemap a .note {
+    position: absolute;
+    bottom: -3em;
+    width: 7em;
+    padding: 0.2em 0.5em;
+    background-color:#ffc;
+    border: 1px solid;
+    text-align: center;
+    left: -1000em;
+    margin-left: -4em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+	color:#000;
+	 
+}  
+ .imagemap a:hover .note,
+.imagemap a:focus .note {
+    left: 63px;
+    z-index: 1;
+}
+  .imagemap a.showitgood:hover .note,
+.imagemap a.showitgood:focus .note {
+    left: -53px;
+    z-index: 1;
+	
+}
+ .imagemap a.showitgood1:hover .note,
+.imagemap a.showitgood1:focus .note {
+    left: 50px;
+    z-index: 1;
+}
+
+.propertys{
+ width:98%;	
+}
+
+
+ /*============ Accordion Settings ==============*/
+#ss_menu { 
+	/*width: 500px; */
+	width:90%;
+	font-size: 0.8em;
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+margin: auto;
+	}
+
+.ss_button { 
+	background-color: #e86600;
+	border-bottom: 1px solid #FFFFFF;
+	cursor: pointer;
+	padding: 5px;
+	color: #FFFFFF;
+	}
+	
+.ss_content {
+	background-color: #F6F6F6;
+	display: none;
+	/*padding: 5px;*/
+	} 
+ 
+   
+/*=========== google maps settings ===============*/	 
+	   #map_canvas{
+	  /*padding:2%;*/
+	 margin: 0 auto;  
+	  height:55%;
+	/*width:100%;*/ 
+	 } 
+	  #gmap_canvas img
+ {
+	 max-width:none!important;background:none!important
+ } 	   
+  #gmap_canvas {
+      /* margin-left: 6%;*/
+	  	 margin: 0 auto;  
+	 /*height:300px;*/
+	
+	 /* width:520px;  */		
+ height:100%;
+	width:90%; 
+      }
+
+/*=========== anchor settings ===============*/	 
+
+a.links:link {text-decoration:none;} 
+a.links:visited {text-decoration:none;}
+a.links:link {color:#b40c00; font-size: 0.9rem;}      
+a.links:visited {color:#e86600;font-size: 0.9rem;}  
+a.links:hover {color:#b40c00; text-decoration:underline;font-size: 0.9rem;}   
+a.links:active {color:#e86600;} 
+ 
 
  /*============ design thumbnails Settings ==============*/
 .thumbnails{
@@ -561,7 +800,8 @@ width: 100%;
 height: 25px;
 background-color: #dfdfdf;
 /* border: 1px red solid; 
-*/font-size: 1rem;
+*/
+font-size: 1rem;
  font-family: Verdana,  Arial, Helvetica, sans-serif;
 	 
 } 
@@ -650,7 +890,8 @@ float:right;
 }
 
 .footer{
-	 
+	font-family: Verdana,  Arial, Helvetica, sans-serif; 
+	font-size: 1rem;
      height:22px;
     border: 1px solid #b40c00;
 	clear: both;
