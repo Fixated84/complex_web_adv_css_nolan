@@ -324,7 +324,7 @@ nav ul{
 
 nav ul li{
 display: inline;
-border-right: 1px #000 solid;
+border-right: 0px #000 solid;
 padding: 1px 1%;
 height: 50px;
 
@@ -342,7 +342,7 @@ nav ul li a{
 color: #b40c00;
 line-height: 10px;
 text-decoration: none;
-font-size: 0.9rem;
+font-size: 1rem;
 }
 
 nav ul li a:hover{
