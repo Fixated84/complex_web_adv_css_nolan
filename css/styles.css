@@ -205,7 +205,7 @@ margin: auto;
 	}
 	
 .ss_content {
-	background-color: #F6F6F6;
+	background-color: #fff;
 	display: none;
 	/*padding: 5px;*/
 	} 
@@ -340,7 +340,7 @@ nav ul li a{
 color: #b40c00;
 line-height: 10px;
 text-decoration: none;
-font-size: 0.6rem;
+font-size: 0.9rem;
 }
 
 nav ul li a:hover{
@@ -368,7 +368,7 @@ box-shadow: 0px 0px 5px #f0f0f0;*/
 display:none;	
 }
 
-
+/*-----------------footer------------------*/
 .footer{
 	font-family: Verdana,  Arial, Helvetica, sans-serif; 
  font-size: 1rem;
@@ -378,24 +378,24 @@ padding-bottom:10px;
 .footer a:link {
 	text-decoration:none;
 	color:#000000;
-	font-size: 10pt;
+	font-size: 0.7rem;
  
  }
  .footer a:visited {
 	text-decoration:none;
 	color:#e86600;
-	font-size: 10pt; 
+	ont-size: 0.7rem;
  }
  
   .footer a:hover {
 	text-decoration:underline;
 	color:#b40c00;
-	font-size: 10pt; 
+	font-size: 0.7rem;
  }
   .footer a:hover {
 	 
 	color:#b40c00;
-	font-size: 10pt; 
+	ont-size: 0.7rem;
  }	
 	
  
@@ -929,6 +929,149 @@ text-align:center;
 
 }
 
+/*=================mobile stuff===============*/ 
  
 
- 
+@media (max-width: 450px){
+	
+/*----------------navbar-----------------*/
+
+nav {
+	 
+margin-top: 10px;
+width: 100%;   
+height: 25px;
+background-color: #fff;
+}
+
+nav ul{
+	margin: auto;
+	padding: inherit;              /*----------------navbar evil stuff to make it fit on screen-----------------*/
+	text-align: center;
+}
+
+nav ul li{
+display: inline;
+border-right: 1px #000 solid;
+padding: 1px 1%;
+height: 50px;
+
+}
+
+nav ul li:last-child{
+border: none;
+}
+
+
+
+
+nav ul li a{
+
+color: #b40c00;
+line-height: 10px;
+text-decoration: none;
+font-size: 0.6rem;
+}
+
+nav ul li a:hover{
+color: #b40c00;
+text-decoration:underline;
+}
+	
+	
+}
+
+@media (max-width: 340px){
+	/*----------------navbar-----------------*/
+
+nav {
+	 
+margin-top: 10px;
+width: 100%;   
+height: 25px;
+background-color: #fff;
+}
+
+nav ul{
+	margin: auto;
+	padding: inherit;              /*----------------navbar evil stuff to make it fit on screen-----------------*/
+	text-align: center;
+}
+
+nav ul li{
+display: inline;
+border-right: 1px #000 solid;
+padding: 1px 1%;
+height: 50px;
+
+}
+
+nav ul li:last-child{
+border: none;
+}
+
+
+
+
+nav ul li a{
+
+color: #b40c00;
+line-height: 10px;
+text-decoration: none;
+font-size: 0.6rem;
+}
+
+nav ul li a:hover{
+color: #b40c00;
+text-decoration:underline;
+}
+
+}
+
+@media (max-width: 336px){
+	
+	/*----------------navbar-----------------*/
+
+nav {
+	 
+margin-top: 10px;
+width: 100%;   
+height: 25px;
+background-color: #fff;
+}
+
+nav ul{
+	margin: auto;
+	padding: inherit;              /*----------------navbar evil stuff to make it fit on screen-----------------*/
+	text-align: center;
+}
+
+nav ul li{
+display: inline;
+border-right: 1px #000 solid;
+padding: 1px 1%;
+height: 50px;
+
+}
+
+nav ul li:last-child{
+border: none;
+}
+
+
+
+
+nav ul li a{
+
+color: #b40c00;
+line-height: 10px;
+text-decoration: none;
+font-size: 0.6rem;
+}
+
+nav ul li a:hover{
+color: #b40c00;
+text-decoration:underline;
+}
+
+}
