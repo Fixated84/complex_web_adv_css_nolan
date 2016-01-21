@@ -1,7 +1,20 @@
 @charset "UTF-8";
+
+
+  .imgcool2 {
  
+ 
+ -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+	  }
  
 @media screen and (max-width: 799px){
+
+
+
 
  /*============ design thumbnails Settings ==============*/
  .thumbnails{
@@ -38,8 +51,32 @@ display: inline;
    text-align: center;
    font: 10pt Verdana, Arial, Helvetica, sans-serif;
    }
+/*================ text wrap css ================*/
 
 
+.TextWrap2 {
+	
+	float: right;
+    margin: 10px;
+	padding-right:5px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+	}
+
+.TextWrapLeft {
+	
+	float: left;
+    margin: 10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    padding-left:5px;
+}
+
+
+   
+ 
    /*============ imagemap Settings ==============*/
 .imagemap{
 	margin: auto;
@@ -215,8 +252,9 @@ margin: auto;
 	   #map_canvas{
 	  /*padding:2%;*/
 	 margin: 0 auto;  
-	  height:55%;
-	/*width:100%;*/ 
+ 
+	   
+	 
 	 } 
 	  #gmap_canvas img
  {
@@ -225,25 +263,26 @@ margin: auto;
   #gmap_canvas {
       /* margin-left: 6%;*/
 	  	 margin: 0 auto;  
-	 /*height:300px;*/
+	    height:270px;
+		width:90%;
 	
-	 /* width:520px;  */		
- height:100%;
-	width:90%; 
+	   	
+ 
+	 
       }
 
 /*=========== anchor settings ===============*/	 
 
 a.links:link {text-decoration:none;} 
 a.links:visited {text-decoration:none;}
-a.links:link {color:#b40c00; font-size: 0.9rem;}      
-a.links:visited {color:#e86600;font-size: 0.9rem;}  
-a.links:hover {color:#b40c00; text-decoration:underline;font-size: 0.9rem;}   
+a.links:link {color:#b40c00; font-size: 0.8rem;}      
+a.links:visited {color:#e86600;font-size: 0.8rem;}  
+a.links:hover {color:#b40c00; text-decoration:underline;font-size: 0.8rem;}   
 a.links:active {color:#e86600;} 
  
-
+/*=========== general css settings ===============*/	 
 p{
-font-size: 0.7em;
+font-size: 0.8em;
 font-family: Verdana, Arial, Helvetica, sans-serif; 
 }
 
@@ -270,7 +309,11 @@ margin-right: auto;
 	/*max-height:100%;*/
 }
 
-img.TextWrap{
+
+
+/*=================text wrap============*/
+
+  img.TextWrap{
 	
 	width:190px;
 	display:none;
@@ -280,7 +323,6 @@ height:170px;
 	
 }
 
-  
 /*----------------header----------------*/
 
 .headerwrapper {
@@ -333,10 +375,7 @@ height: 50px;
 nav ul li:last-child{
 border: none;
 }
-
-
-
-
+ 
 nav ul li a{
 
 color: #b40c00;
@@ -407,7 +446,7 @@ padding-bottom:10px;
 /*-----------------everything under here is for screen size above 400px/800px-------------*/
 @media screen and (min-width: 800px) {
 
- 
+
  /*============ design thumbnails Settings ==============*/
  .thumbnails{
     
@@ -684,6 +723,7 @@ display: inline;
    }
 
 
+/*=================general css stuff==================*/
 
 body { /* settings for body */
 	background-color: #dfdfdf; 
@@ -880,6 +920,7 @@ width: 802px;
 	background-color: #F6F6F6;
 	height: 100%;
 	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .sidebar{
