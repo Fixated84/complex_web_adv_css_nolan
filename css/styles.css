@@ -301,6 +301,7 @@ img.displayed { /* settings for image in maincontent div to set image in center 
 display: block;
 margin-left: auto;
 margin-right: auto;
+width:80%;
   
 }
 
@@ -1004,10 +1005,7 @@ height: 50px;
 nav ul li:last-child{
 border: none;
 }
-
-
-
-
+ 
 nav ul li a{
 
 color: #b40c00;
@@ -1052,10 +1050,7 @@ height: 50px;
 nav ul li:last-child{
 border: none;
 }
-
-
-
-
+ 
 nav ul li a{
 
 color: #b40c00;
