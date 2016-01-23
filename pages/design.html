@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AllStyle Homes - Designs</title>
 <link href="../css/styles.css" rel="stylesheet" type="text/css">
+<script src="../js/images.js"></script>
 </head>
 
 <body>
@@ -43,23 +44,35 @@
   <div class="mainbar"> 
  <h3>AllStyle Homes Designs</h3>  
    <p> Here we have  home design gallery and options we include in our packages. If you would like more information or to buy a house and land package click <a class="links" href="#">here.</a><br></p>
-   <div class="imagemap">
+   
+   
+   <div class="imgwrap"> 
+   <div class="imagemap" id="map">
  
-    <img  class="propertys" src="../images/imgmap.jpg" alt="Image Map"     /> 
+    <img    src="../images/imgmap.jpg" alt="Image Map" class="propertys"     /> 
+    
+   <!-- <map name="imgmap">
+		<area shape="circle" coords="114,164,6" href="#" title="We use only the highest quality Australian building products."  />
+	    <area shape="circle" coords="210,216,6" href="#" title="Quality fittings and fixtures throughout are standard features in all our homes." alt="The Powerpuff Girls"  />
+        <area shape="circle" coords="354,199,6" href="#" title="A quality water tank is just one of our many standard inclusions." alt="The Powerpuff Girls"  />
+    	<area shape="circle" coords="83,270,6" href="#" title="landscaping to all outside areas is just part of our standard package."  />
+        <area shape="circle" coords="509,28,6" href="#" title="A wipe range of additional features are avialable including a cosy fireplace."  /> 
+        
+        </map>-->
     <ul>
        <li class="tip1"><a onclick="return false;" href="#" title="">?<span class="note">landscaping to all outside areas is just part of our standard package.</span></a></li>
-        <li class="tip2"><a onclick="return false;" class="showitgood" href="#" title="">?<span class="note">A wipe range of additional features are avialable including a cosy fireplace.</span></a></li>
-        <li class="tip3"><a onclick="return false;" class="showitgood1" href="#" title="">?<span class="note">A quality water tank is just one of our many standard inclusions.</span></a></li>
+        <li class="tip2"><a onclick="return false;" href="#" title="">?<span class="note">A wipe range of additional features are avialable including a cosy fireplace.</span></a></li>
+        <li class="tip3"><a onclick="return false;" href="#" title="">?<span class="note">A quality water tank is just one of our many standard inclusions.</span></a></li>
         <li class="tip4"><a onclick="return false;" href="#" title="">?<span class="note">We use only the highest quality Australian building products.</span></a></li>
         <li class="tip5"><a onclick="return false;" href="#" title="">?<span class="note">Quality fittings and fixtures throughout are standard features in all our homes.</span></a></li>       <br>
          
-    </ul>
-   
-</div>
+    </ul> 
+     </div>
 
 
+<br><br>
 <div class="thumbnails">
- <ul>
+ <ul class="row1">
 <li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic('../images/designs/property1.jpg');" ><img  class="designthumbs" src="../images/thumbs/property1.jpg" alt=""></li>
 
 <li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic('../images/designs/property2.jpg');" ><img  class="designthumbs" src="../images/thumbs/property2.jpg" alt=""></li>
@@ -74,6 +87,9 @@
 
 <li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic('../images/designs/property7.jpg');" ><img  class="designthumbs" src="../images/thumbs/property7.jpg" alt=""></li>
 
+</ul>
+<br>
+<ul class="row2">
 <li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic('../images/designs/property8.jpg');" ><img  class="designthumbs" src="../images/thumbs/property8.jpg" alt=""></li>
 
 <li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic('../images/designs/property9.jpg');" ><img  class="designthumbs" src="../images/thumbs/property9.jpg" alt=""></li>
@@ -92,7 +108,7 @@
 
 </div>
  
- 
+ </div>
 
   </div>
   
@@ -125,4 +141,15 @@
 <!--</section>-->
 </div>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+	 
+	});
+});
+</script>
 </html>

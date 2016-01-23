@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-
+ 
   .imgcool2 {
  
  
@@ -10,31 +10,55 @@
       -ms-transition: all 0.5s ease;
           transition: all 0.5s ease;
 	  }
+	  
+	  
+	  
  
 @media screen and (max-width: 799px){
 
 
-
+.imgwrap{
+width:100%;
+height:100%;
+margin:auto;	
+ 
+	
+}
 
  /*============ design thumbnails Settings ==============*/
  .thumbnails{
     
     padding: 0;
     list-style: none;
-	width:100%;
-	 margin-top:-3%; 
- 	 
-  }
-.thumbnails ul{
- margin-left:-7%;
-display: inline;	
+	margin-top:-8%;
+	  }
+  
+   .thumbnails ul{
+	     padding: 0;
  
+ display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */
+ 
+  }
+.row1{
+	margin:auto;
+ 
+  	
+  
+}
 
+.row2{
+ margin:auto;
+ 
+ 
  
 }
 .thumbnails ul li{
 	
 display: inline;	
+margin:auto;
+
 }
 
   li.but1 {
@@ -78,27 +102,37 @@ display: inline;
    
  
    /*============ imagemap Settings ==============*/
+  
 .imagemap{
+height:100%;	
+width:100%;	
+	
 	margin: auto;
 	  position: relative;  
-	 /*position:absolute;*/
-	  
 }
+img   {
+	
+ 
+ display: block;
+   max-width: 100%;
+   height: auto;
 
+}
+ 
 .imagemap ul {
     
     padding: 0;
     list-style: none;
-	 
-	 
-	/*margin-top:-19%; ============ layer issue maybe ==============*/
-height:0px;
-width:0px;	 
   
+	height:0px;
+	width:0px;
+	 
+ 	/*margin-top:-19%; ============ layer issue maybe ============== */
+ 
 }
-.imagemap a {
-	/*position: absolute;*/
-	position: relative;  
+ .imagemap a {
+	position: absolute;
+	 
 	display: block;
  	background-color:#000;
 	
@@ -108,8 +142,8 @@ width:0px;
 	text-decoration: none;
 	border: 1px solid transparent;
 	  color:#FFF;
- 	font-family: Verdana, Arial, Helvetica, sans-serif; /* sets font */
-	font-size: 10px;  /* sets font size */
+ 	font-family: Verdana, Arial, Helvetica, sans-serif;  
+	font-size: 10px;  
 	text-align:center; 
 
  
@@ -126,21 +160,20 @@ width:0px;
  }
  
 .imagemap .tip1 a {
-	top: -50px;
-	left: 65px;
+	top: -70px;
+	left: 85px;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
 	border-bottom-right-radius: 2em;
 	border-bottom-left-radius: 2em;
 	padding-top: 1px;
-position: relative;  
- 	 
-}
+    position: relative;
+ }
  
 .imagemap .tip2 a {
-	top: -320px;
-	left: 520px;
+	top: -420px;
+	left: 685px;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -150,8 +183,8 @@ position: relative;
 	position: relative;  
 }
  .imagemap .tip3 a {
-	top: -190px;
-	left: 365px;
+	top: -230px;
+	left: 475px;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -162,8 +195,8 @@ position: relative;
 }
 
 .imagemap .tip4 a {
-	top: -221px;
-	left: 111px;
+	top: -271px;
+	left: 151px;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -175,8 +208,8 @@ position: relative;
 }
 
 .imagemap .tip5 a {
-	top: -179px;
-	left: 211px;
+	top: -229px;
+	left: 278px;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -219,10 +252,13 @@ position: relative;
     z-index: 1;
 }
 
-.propertys{
- width:98%;	
-}
-
+ .propertys{
+ 
+ display: block;
+margin-left: auto;
+margin-right: auto;
+width:100%;
+} 
 
  /*============ Accordion Settings ==============*/
 #ss_menu { 
@@ -301,7 +337,7 @@ img.displayed { /* settings for image in maincontent div to set image in center 
 display: block;
 margin-left: auto;
 margin-right: auto;
-width:80%;
+ 
   
 }
 
@@ -454,8 +490,7 @@ padding-bottom:10px;
     padding: 0;
     list-style: none;
 	width:100%;
-	 margin-top:-3%; 
- 	 
+	 	 
   }
 .thumbnails ul{
  margin-left:-7%;
@@ -487,11 +522,10 @@ display: inline;
 
    /*============ imagemap Settings ==============*/
 .imagemap{
-	margin: auto;
+	 
 	  position: relative;  
-	 /*position:absolute;*/
-	  
-}
+	  width:100%;
+ }
 
 .imagemap ul {
     
@@ -505,8 +539,8 @@ width:0px;
   
 }
 .imagemap a {
-	/*position: absolute;*/
-	position: relative;  
+	 position: absolute; 
+ 
 	display: block;
  	background-color:#000;
 	
@@ -547,8 +581,8 @@ position: relative;
 }
  
 .imagemap .tip2 a {
-	top: -320px;
-	left: 520px;
+	top: -270px;
+	left: 530px;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -628,8 +662,10 @@ position: relative;
 }
 
 .propertys{
- width:98%;	
-}
+	/*height:  258px;
+	width: 585px;*/
+	 
+	}
 
 
  /*============ Accordion Settings ==============*/
@@ -1143,6 +1179,22 @@ line-height: 10px;
 text-decoration: none;
 font-size: 0.7rem;
 }	
+
+.imagemap{
+height:100%;	
+width:100%;	
+	
+	margin: auto;
+	  position: relative;  
+}
+img   {
+	
+ 
+ display: block;
+   max-width: 100%;
+   height: auto;
+
+}
 }
 
 @media (max-width: 402px){
