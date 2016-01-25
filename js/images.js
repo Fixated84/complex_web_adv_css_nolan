@@ -66,5 +66,5 @@ document.getElementById('map').innerHTML =  '<a onclick="return false;" class="h
 
  
  function chpic2(pic){
-document.getElementById('map').innerHTML = ' <ul> <li class="tip1"><a href="#" title="">?<span class="note">landscaping to all outside areas is just part of our standard package.</span>  <li class="tip2"><a class="showitgood" href="#" title="">?<span class="note">A wipe range of additional features are avialable including a cosy fireplace.</span></a></li> <li class="tip3"><a class="showitgood1" href="#" title="">?<span class="note">A quality water tank is just one of our many standard inclusions.</span></a></li>   <li class="tip4"><a href="#" title="">?<span class="note">We use only the highest quality Australian building products.</span></a></li>   <li class="tip5"><a href="#" title="">?<span class="note">Quality fittings and fixtures throughout are standard features in all our homes.</span></a></li></a> </ul> <img class="propertys" border=0 src=' + pic + '>';
+document.getElementById('map').innerHTML = '<img class="propertys" border=0  src=' + pic + '>';
 }

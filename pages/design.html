@@ -10,7 +10,7 @@
 
 <body>
 <div class="wrapper">
-<!--<header>-->
+ 
 	 <div class="headerwrapper">
 		 <div class="leftheader"><img class="displayed" src="../images/logo.png"   alt="AllStyle Homes Logo"></div>
          <div class="rightheader">
@@ -34,26 +34,21 @@
 </nav>
 		
 		
-<!--</header>-->
-
-<!--<section class="cluster cluster-1">-->
-
-
-<!--content wrapper for mainbar and sidebar-->
+ 
  <div class="contentwrapper">
   <div class="mainbar"> 
  <h3>AllStyle Homes Designs</h3>  
    <p> Here we have  home design gallery and options we include in our packages. If you would like more information or to buy a house and land package click <a class="links" href="#">here.</a><br></p>
    
    
-   <div class="imgwrap"> 
+  <!-- <div class="imgwrap"> -->
    <div class="imagemap" id="map">
  
-    <img    src="../images/imgmap.jpg" alt="Image Map" class="propertys"     /> 
+    <img class="displayed"  src="../images/imgmap.jpg" alt="Image Map"  /> 
     
-   <!-- <map name="imgmap">
-		<area shape="circle" coords="114,164,6" href="#" title="We use only the highest quality Australian building products."  />
-	    <area shape="circle" coords="210,216,6" href="#" title="Quality fittings and fixtures throughout are standard features in all our homes." alt="The Powerpuff Girls"  />
+   <!-- <map name="imgmap">usemap="#imgmap"
+		<area shape="circle" coords="114,163,6" href="#" title="We use only the highest quality Australian building products."  />
+	    <area shape="circle" coords="210,213,6" href="#" title="Quality fittings and fixtures throughout are standard features in all our homes." alt="The Powerpuff Girls"  />
         <area shape="circle" coords="354,199,6" href="#" title="A quality water tank is just one of our many standard inclusions." alt="The Powerpuff Girls"  />
     	<area shape="circle" coords="83,270,6" href="#" title="landscaping to all outside areas is just part of our standard package."  />
         <area shape="circle" coords="509,28,6" href="#" title="A wipe range of additional features are avialable including a cosy fireplace."  /> 
@@ -102,7 +97,7 @@
 
 <li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic('../images/designs/property13.jpg');" ><img  class="designthumbs" src="../images/thumbs/property13.jpg" alt=""></li>
 
-<li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic2('../images/imgmap.jpg');" ><img  class="designthumbs" src="../images/thumbs/property14.jpg" alt=""></li>
+<li class="but1" onMouseOver="this.className='but2';" onMouseOut="this.className='but1';" onClick="chpic2('../images/imgmapnew.jpg');" ><img  class="designthumbs" src="../images/thumbs/property14.jpg" alt=""></li>
 
 </ul>
 
@@ -110,7 +105,7 @@
  
  </div>
 
-  </div>
+<!--  </div>-->
   
   <div class="sidebar"> <br>
 
@@ -142,7 +137,7 @@
 </div>
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="../js/jquery.rwdImageMaps.min.js"></script>
 <script>
 $(document).ready(function(e) {
 	$('img[usemap]').rwdImageMaps();
