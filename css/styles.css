@@ -1094,7 +1094,17 @@ color: #b40c00;
 text-decoration:underline;
 }
 	
-	
+.imagemap .tip1 a {
+	top: 80%;
+	left: 12%;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top: 1px;
+  
+}	 
 }
 
 @media (max-width: 340px){
@@ -1195,6 +1205,8 @@ line-height: 10px;
 text-decoration: none;
 font-size: 0.5rem;
 }	
+
+
 	
 }
 
@@ -1207,9 +1219,11 @@ line-height: 10px;
 text-decoration: none;
 font-size: 0.8rem;
 }
+
+/*landscaping to all outside areas is just part of our standard package.*/
 .imagemap .tip1 a {
-	top: 82%;
-	left: 15%;
+	top: 80%;
+	left: 12%;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -1219,10 +1233,10 @@ font-size: 0.8rem;
   
  	 
 }
- 
+ /*A wipe range of additional features are avialable including a cosy fireplace.*/
 .imagemap .tip2 a {
 	top: 10%;
-	left: 91%;
+	left: 90%;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -1231,8 +1245,10 @@ font-size: 0.8rem;
 	padding-top: 1px;
   
 }
+
+/*A quality water tank is just one of our many standard inclusions.*/
  .imagemap .tip3 a {
-	top: 60%;
+	top: 52%;
 	left: 63%;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
@@ -1242,9 +1258,9 @@ font-size: 0.8rem;
 	padding-top:1px;
 	  
 }
-
+/*We use only the highest quality Australian building products.*/
 .imagemap .tip4 a {
-	top: 54%;
+	top: 50%;
 	left: 20%;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
@@ -1255,10 +1271,10 @@ font-size: 0.8rem;
 	  
 
 }
-
+/*Quality fittings and fixtures throughout are standard features in all our homes.*/
 .imagemap .tip5 a {
-	top: 64%;
-	left: 36%;
+	top: 60%;
+	left: 37%;
 	border: 1px solid black;
 	border-top-left-radius: 2em;
 	border-top-right-radius: 2em;
@@ -1304,5 +1320,29 @@ color: #b40c00;
 line-height: 10px;
 text-decoration: none;
 font-size: 0.5rem;
+}
+.imagemap .tip1 a {
+	top: 75%;
+	left: 10%;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top: 1px;
+ 	 
+}
+/*Quality fittings and fixtures throughout are standard features in all our homes.*/
+.imagemap .tip5 a {
+	top: 58%;
+	left: 35%;
+	border: 1px solid black;
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+	padding-top:1px;
+	 
+
 }
 }
