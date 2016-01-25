@@ -261,6 +261,44 @@ margin-right: auto;
 width:100%;
 } 
 
+a.hovertext {
+		
+    position: relative;
+    width:100%;
+	height:100%;
+ 
+    text-decoration: none !important;
+    text-align: center;
+	
+ font-family: Verdana, Arial, Helvetica, sans-serif;  
+	font-size: 0.6rem; 
+	border: 0; 
+  opacity: 1.0;
+  }
+  a.hovertext:after {
+    content: attr(title1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0.5em 1px;
+    width: 99%;
+    background: rgba(0,0,0,0.8);
+    text-decoration: none !important;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+	font-family: Verdana, Arial, Helvetica, sans-serif;  
+	font-size: 0.6rem;   
+	
+ 
+  }
+  a.hovertext:hover:after, a.hovertext:focus:after {
+    opacity: 1.0;
+  }
+
  /*============ Accordion Settings ==============*/
 #ss_menu { 
 	/*width: 500px; */
@@ -672,13 +710,14 @@ a.hovertext {
 		
     position: relative;
     width:100%;
-	height:100%;
+	height:80%;
+	margin:auto;
  
     text-decoration: none !important;
     text-align: center;
 	
  font-family: Verdana, Arial, Helvetica, sans-serif;  
-	font-size: 12pt;  
+	font-size: 0.8rem;  
 	border: 0; 
   opacity: 1.0;
   }
@@ -687,8 +726,8 @@ a.hovertext {
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 0.5em 1px;
-    width: 592px;
+    padding: 0;
+    width: 100%;
     background: rgba(0,0,0,0.8);
     text-decoration: none !important;
     color: #fff;
@@ -698,7 +737,7 @@ a.hovertext {
     -o-transition: 0.5s;
     -ms-transition: 0.5s;
 	font-family: Verdana, Arial, Helvetica, sans-serif;  
-	font-size: 12pt;   
+	font-size: 0.8rem;  
 	
  
   }
