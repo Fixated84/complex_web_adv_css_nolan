@@ -276,7 +276,8 @@ a.hovertext {
   opacity: 1.0;
   }
   a.hovertext:after {
-    content: attr(title1);
+    content: attr(title1);  
+   /*  content: " (' attr(title1) ') ";*/
     position: absolute;
     left: 0;
     bottom: 0;
@@ -501,7 +502,7 @@ padding-bottom:10px;
  .footer a:visited {
 	text-decoration:none;
 	color:#e86600;
-	ont-size: 0.7rem;
+	font-size: 0.7rem;
  }
  
   .footer a:hover {
@@ -512,7 +513,7 @@ padding-bottom:10px;
   .footer a:hover {
 	 
 	color:#b40c00;
-	ont-size: 0.7rem;
+	font-size: 0.7rem;
  }	
 	
  
@@ -722,7 +723,8 @@ a.hovertext {
   opacity: 1.0;
   }
   a.hovertext:after {
-    content: attr(title1);
+    content: attr(title1); 
+ /*  content: " (' attr(title1) ') ";*/
     position: absolute;
     left: 0;
     bottom: 0;
