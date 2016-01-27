@@ -12,7 +12,7 @@
 <div class="wrapper">
 <!--<header>-->
 	 <div class="headerwrapper">
-		 <div class="leftheader"><img class="displayed" src="images/logo.png"   alt="AllStyle Homes Logo"></div>
+		 <div class="leftheader"><img id="effectimg"  class="displayed" src="images/logo.png"   alt="AllStyle Homes Logo"></div>
          <div class="rightheader">
          <h2>Contact details:<br>
         255 Serenity Drive <br> 
@@ -80,5 +80,27 @@
  
 <!--</section>-->
 </div>
+<script>
+ 
+var effectimg = document.getElementById("effectimg");
+ 
+
+window.onload = function(){
+	
+ 
+ effectimg.addEventListener("click", function(){
+ effectimg.className = "displayed animated flipInX";
+ 
+ setTimeout(function() {
+ effectimg.className = "displayed";	 
+ },1500);	 
+ 
+    }	);  
+ 
+ 
+};
+ </script>
+
+
 </body>
 </html>
