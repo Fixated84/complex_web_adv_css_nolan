@@ -1,18 +1,19 @@
 <?php 
 include("connect.php");
- $fullname = $_POST['fullname'];
+ $firstname = $_POST['firstname'];
+ $lastname = $_POST['lastname'];
  $email = $_POST['email'];
 
  
  
-$queryadd = "INSERT INTO emaillist (user_ID, fullname, email)
-VALUES (NULL,'$fullname', '$email')";
+$queryadd = "INSERT INTO emaillist (user_ID, firstname, lastname, email)
+VALUES (NULL,'$firstname', '$lastname', '$email')";
 $updatedb = mysqli_query($con,$queryadd);
 
  mysqli_close($con);
 
  if ($updatedb) {
- echo "<br>New record created successfully <br> You have added the Username: " .$fullname . " and the Email: " .$email . " to the database." ;
+ echo "<br> You have successfully added: " .$firstname . " " . $lastname . " and the Email: " .$email . " to the mailing list." ;
 
  }else{
    echo "info could not be added";

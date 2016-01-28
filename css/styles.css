@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+ .formcentre{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:0.9rem;
+/*border:1px red solid;*/
+text-align:center;
+	 
+ }
+ 
+ .formcentre input {
+	 width:40%;
+	 
+	 
+ }
+  
+ 
+ input[type=submit]{
+	 width:20%;
+	 
+ }
+ input[type=button]{
+	 width:20%;
+	 
+	 
+	 
+ }
+  
  
   .imgcool2 {
  

@@ -1,3 +1,35 @@
+<?php
+$message = "<br><p></p><br>";
+ 
+include("connect.php");
+/*$firstname = (isset($_POST['firstname']) ? $_POST['firstname'] : null);*/
+ if($_POST) {
+ 
+ 
+ $firstname = $_POST['firstname']; 
+ $lastname = $_POST['lastname'];
+ $email = $_POST['email'];
+
+ 
+ 
+$queryadd = "INSERT INTO emaillist (user_ID, firstname, lastname, email)
+VALUES (NULL,'$firstname', '$lastname', '$email')";
+$updatedb = mysqli_query($con,$queryadd);
+
+ mysqli_close($con);
+
+if ($updatedb) {
+ $message = "<br><p class=\"animated bounce\">You have successfully added: " .$firstname . " " . $lastname . " to the mailing list.</p>" ;
+
+ }else{
+   $message = "<br><p> Your information could not be added to the mailing list.</p>";
+
+ }
+}
+?>
+
+
+
 <!doctype html>
 <html>
 <head>
@@ -5,7 +37,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AllStyle Homes</title>
 <link href="../css/styles.css" rel="stylesheet" type="text/css">
-<link href="../css/animate.css" rel="stylesheet" type="text/css">
+ <link href="../css/animate.css" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="../css/css3buttons.css" media="screen"> 
+ 
 </head>
 
 <body>
@@ -44,17 +78,32 @@
   <div class="mainbar"> 
  <h3>Welcome to AllStyle Homes Bundaberg! </h3>   
 
-<form action="sendInfoToDB.php" method="POST">
-	<label>Enter Full Name and Email:</label><br>
-	<div class="input-group input input-group-lg">
- <span class="input-group-addon" id="sizing-addon1">Full Name:</span>
- <input class="form-control"  type="text"  name="fullname" placeholder="Full Name"> </input>
-<div  class="input-group input input-group-lg">
-	<span class="input-group-addon email" id="sizing-addon1">Email:</span>
- <input class="form-control"  type="text"  name="email" placeholder="Email" ></input> 
+<form ∂ method="POST" class="formcentre">
+	<label>Enter Full Name and Email:</label>
+   
+ 
+
+<?php
+echo  $message;
+?>
+ 
+
+	<div  >
   
-</div><br>
-  <input type="submit" value="Submit" name="submit" class="btn btn-success"></input>
+ <span>First Name:</span>
+ <input  type="text"  name="firstname" placeholder="First Name" required> </input>
+ <br>
+<span>Last Name:</span>
+ <input  type="text"  name="lastname" placeholder="Last Name" required> </input> 
+ 
+	<br>
+<span>Email:</span>
+ <input type="text"  name="email" placeholder="Email" required ></input> 
+  
+ <br>
+<br>
+  <input type="submit" value="Submit" name="submit" class="button"></input>
+  <input type="button" value="Login"  onClick="window.location.href='send_mail.php'" class="button"></input> 
  
 </form>
 
@@ -109,7 +158,6 @@ window.onload = function(){
  
 };
  </script>
-
 
 </body>
 </html>
