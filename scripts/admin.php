@@ -1,33 +1,23 @@
-<?php
-$message = "<br><p></p><br>";
- 
-include("connect.php");
-/*$firstname = (isset($_POST['firstname']) ? $_POST['firstname'] : null);*/
- if($_POST) {
- 
- 
- $firstname = $_POST['firstname']; 
- $lastname = $_POST['lastname'];
- $email = $_POST['email'];
+ <?php
+ include("connect.php");
 
  
+   if($_POST) {
+ $email = $_POST['email'];
  
-$queryadd = "INSERT INTO emaillist (user_ID, firstname, lastname, email)
-VALUES (NULL,'$firstname', '$lastname', '$email')";
-$updatedb = mysqli_query($con,$queryadd);
+
+
+$queryremove = "DELETE FROM emaillist WHERE (`email` = '$email')";	 
+
+  
+$updatedb = mysqli_query($con,$queryremove);
 
  mysqli_close($con);
-
-if ($updatedb) {
- $message = "<br><p class=\"animated bounce\">You have successfully added: " .$firstname . " " . $lastname . " to the mailing list.</p>" ;
-
- }else{
-   $message = "<br><p> Your information could not be added to the mailing list.</p>";
-
- }
-}
-?>
-
+  
+ 
+   }
+ 
+ ?>
 
 
 <!doctype html>
@@ -76,36 +66,60 @@ if ($updatedb) {
 <!--content wrapper for mainbar and sidebar-->
  <div class="contentwrapper">
   <div class="mainbar"> 
- <h3>AllStyle Homes Mailing List </h3>   
+ <h3>AllStyle Homes Mailing List Database </h3>   
 
-<form ∂ method="POST" class="formcentre">
-	<label>Enter Full Name and Email:</label>
-   
- 
 
+
+<table>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+<th>Remove</th >
+<tr>
 <?php
-echo  $message;
-?>
- 
 
-	<div  >
-  
- <span>First Name:</span>
- <input  type="text"  name="firstname" placeholder="First Name" required> </input>
- <br>
-<span>Last Name:</span>
- <input  type="text"  name="lastname" placeholder="Last Name" required> </input> 
+include("connect.php");
+
+$query = "SELECT * FROM emaillist WHERE 1";
+$result = mysqli_query($con,$query);
+
  
-	<br>
-<span>Email:</span>
- <input type="text"  name="email" placeholder="Email" required ></input> 
-  
- <br>
-<br>
-  <input type="submit" value="Submit" name="submit" class="button"></input>
-  <input type="button" value="Login"  onClick="window.location.href='admin.php'" class="button"></input> 
+ while($row = mysqli_fetch_array($result)):
  
-</form>
+ 
+ 
+ $firstname = $row['firstname'];
+$lastname = $row['lastname'];
+$email = $row['email'];
+ 
+echo "<tr id=\"tr1\">";
+
+echo "<td>".$row['firstname']."</td>";
+echo "<td>".$row['lastname']."</td>";
+echo "<td>".$row['email']."</td>";
+ 
+ 
+echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\1\" onclick=\"myfunc(this);\" onChange=\"cbChange(this)\"></td>";
+ endwhile;
+ 
+ 
+ 
+ 
+?>
+
+</table>
+
+
+  <!--onsubmit="goToPage(this.url.value);-->
+<FORM name="something" method="POST">
+ 
+<INPUT type="hidden" name="email" value=""  class="phone">
+<INPUT type="submit" value="Remove">
+
+
+<input name="Button2" type="button"   onClick="window.location.href='password_protect.php?logout=1'" value="Log Out"/>
+</FORM>
 
 </div>
   </div>
@@ -158,6 +172,36 @@ window.onload = function(){
  
 };
  </script>
+ 
+ <script type='text/javascript'>//<![CDATA[ 
+window.onload=function(){
+var btns = document.querySelectorAll('.remove'),
+    phone = document.querySelector('.phone');
+
+// looping through the nodelist and attaching eventlisteners
+[].forEach.call(btns, function(btn) {
+    btn.addEventListener('click', function(event) {
+        // fetching the phone number
+		
+		 
+        var selectedPhone = event.target.parentNode.previousSibling.textContent;
+        phone.value = selectedPhone; //setting the value 
+		//alert(selectedPhone);
+    }, false);
+});
+}//]]>  
+ 
+</script>
+
+<SCRIPT type="text/javascript">
+function goToPage(url)
+{
+var initial = "localhost/scripts/removemail";
+var extension = ".php?email=";
+
+document.something.action=initial+extension+url;
+}
+</SCRIPT>
 
 </body>
 </html>
