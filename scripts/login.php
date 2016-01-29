@@ -1,33 +1,33 @@
-<?php
-$message = "<br><p></p><br>";
- 
+ <?php
+$message = "<p></p>";
+
+if($_POST) {
+
+$username = $_POST['username'];
+$password = md5($_POST['password']);
+
+
 include("connect.php");
-/*$firstname = (isset($_POST['firstname']) ? $_POST['firstname'] : null);*/
- if($_POST) {
- 
- 
- $firstname = $_POST['firstname']; 
- $lastname = $_POST['lastname'];
- $email = $_POST['email'];
 
- 
- 
-$queryadd = "INSERT INTO emaillist (user_ID, firstname, lastname, email)
-VALUES (NULL,'$firstname', '$lastname', '$email')";
-$updatedb = mysqli_query($con,$queryadd);
+$query =  "SELECT * FROM `users` WHERE `username` = '$username' AND `password` = '$password'";
 
- mysqli_close($con);
+$result = mysqli_query($con, $query);
+if (mysqli_num_rows($result)==1) {
+ //  echo "<br> username: " . $username . " is in the database";
+	session_start();
+	$_SESSION['username']= 'true';
+header('location:admin.php');
 
-if ($updatedb) {
- $message = "<br><p class=\"animated bounce\">You have successfully added: " .$firstname . " " . $lastname . " to the mailing list.</p>" ;
+}else {
+ $message = "<br><p>Incorrect Username or Password</p>";
 
- }else{
-   $message = "<br><p> Your information could not be added to the mailing list.</p>";
-
- }
 }
-?>
+ 
+   }
+   
 
+ 
+ ?>
 
 
 <!doctype html>
@@ -76,39 +76,30 @@ if ($updatedb) {
 <!--content wrapper for mainbar and sidebar-->
  <div class="contentwrapper">
   <div class="mainbar"> 
- <h3>AllStyle Homes Mailing List </h3>   
+ <h3>AllStyle Homes Mailing List Database </h3>   
 
-<form method="POST" class="formcentre">
-	<label>Enter Full Name and Email:</label>
-   
+<form  class="formcentre" method="POST">
+	<label>Enter your login details:</label><br><br>
+	<div class="input-group input input-group-lg">
+		<span class="input-group-addon username" id="sizing-addon1">Username</span>
+ <input class="form-control"  type="text"  name="username" placeholder="Username" </input>
+</div>
  
-
-<?php
-echo  $message;
-?>
- 
-
-	<div  >
-  
- <span>First Name:</span>
- <input  type="text"  name="firstname" placeholder="First Name" required> </input>
- <br>
-<span>Last Name:</span>
- <input  type="text"  name="lastname" placeholder="Last Name" required> </input> 
- 
-	<br>
-<span>Email:</span>
- <input type="text"  name="email" placeholder="Email" required ></input> 
-  
- <br>
 <br>
-  <input type="submit" value="Submit" name="submit" class="button"></input>
-  <input type="button" value="Login"  onClick="window.location.href='admin.php'" class="button"></input> 
- 
+<div  class="input-group input input-group-lg">
+	<span class="input-group-addon password" id="sizing-addon1">Password</span>
+ <input class="form-control"  type="password"  name="password" placeholder="Password" </input> 
+  
+</div><br>
+  <input type="submit" value="Submit" name="submit" class="btn btn-success"></input>
+ <?php
+echo $message;
+ ?>
+
 </form>
 
 </div>
-  </div>
+ 
   
   <div class="sidebar"> <br>
 
@@ -130,8 +121,8 @@ echo  $message;
 
         <a  href="https://greatstartgrant.osr.qld.gov.au/quick-calculate.php" target="_blank" ><img class="displayed"  src="../images/loan.PNG" alt="Loan Calculator" height="130" width="180"></a>     
     </div>
-   
-  </div>
+    </div>
+  
  
    <div class="footer">  <a href="../pages/privacy.html" >© 2012 AllStyle Homes - Copyright and Privacy Information</a> </div>
 
@@ -158,6 +149,36 @@ window.onload = function(){
  
 };
  </script>
+ 
+ <script type='text/javascript'>//<![CDATA[ 
+window.onload=function(){
+var btns = document.querySelectorAll('.remove'),
+    phone = document.querySelector('.phone');
+
+// looping through the nodelist and attaching eventlisteners
+[].forEach.call(btns, function(btn) {
+    btn.addEventListener('click', function(event) {
+        // fetching the phone number
+		
+		 
+        var selectedPhone = event.target.parentNode.previousSibling.textContent;
+        phone.value = selectedPhone; //setting the value 
+		//alert(selectedPhone);
+    }, false);
+});
+}//]]>  
+ 
+</script>
+
+<SCRIPT type="text/javascript">
+function goToPage(url)
+{
+var initial = "localhost/scripts/removemail";
+var extension = ".php?email=";
+
+document.something.action=initial+extension+url;
+}
+</SCRIPT>
 
 </body>
 </html>

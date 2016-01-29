@@ -1,12 +1,15 @@
  <?php
+ session_start();
+if (!isset($_SESSION['username'])) {
+ header('location:login.php');
+}
+
  include("connect.php");
 
  
    if($_POST) {
  $email = $_POST['email'];
  
-
-
 $queryremove = "DELETE FROM emaillist WHERE (`email` = '$email')";	 
 
   
@@ -17,6 +20,13 @@ $updatedb = mysqli_query($con,$queryremove);
  
    }
  
+ if(isset($_GET['logout'])) {
+ session_unset(); 
+
+// destroy the session 
+session_destroy(); 
+header('Location:login.php');
+}
  ?>
 
 
@@ -70,7 +80,7 @@ $updatedb = mysqli_query($con,$queryremove);
 
 
 
-<table>
+<table class="maillist">
 <tr>
 <th>First Name</th>
 <th>Last Name</th>
@@ -85,7 +95,7 @@ $query = "SELECT * FROM emaillist WHERE 1";
 $result = mysqli_query($con,$query);
 
  
- while($row = mysqli_fetch_array($result)):
+ while($row = mysqli_fetch_array($result)) :
  
  
  
@@ -111,18 +121,18 @@ echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\
 </table>
 
 
-  <!--onsubmit="goToPage(this.url.value);-->
-<FORM name="something" method="POST">
+  <!--onsubmit="goToPage(this.url.value);--><br>
+<FORM class="formcentre" name="something" method="POST">
  
 <INPUT type="hidden" name="email" value=""  class="phone">
 <INPUT type="submit" value="Remove">
 
 
-<input name="Button2" type="button"   onClick="window.location.href='password_protect.php?logout=1'" value="Log Out"/>
+<input name="Button2" type="button"   onClick="window.location.href='admin.php?logout=1'" value="Log Out"/>
 </FORM>
 
 </div>
-  </div>
+ 
   
   <div class="sidebar"> <br>
 
@@ -144,8 +154,8 @@ echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\
 
         <a  href="https://greatstartgrant.osr.qld.gov.au/quick-calculate.php" target="_blank" ><img class="displayed"  src="../images/loan.PNG" alt="Loan Calculator" height="130" width="180"></a>     
     </div>
-   
-  </div>
+    </div>
+  
  
    <div class="footer">  <a href="../pages/privacy.html" >© 2012 AllStyle Homes - Copyright and Privacy Information</a> </div>
 
