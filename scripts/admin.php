@@ -121,7 +121,7 @@ echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\
 </table>
 
 
-  <!--onsubmit="goToPage(this.url.value);--><br>
+  <!--onsubmit="goToPage(this.url.value);--><br><br>
 <FORM class="formcentre" name="something" method="POST">
  
 <INPUT type="hidden" name="email" value=""  class="phone">

@@ -1087,9 +1087,10 @@ width: 802px;
 	border: 1px solid #b40c00;
 	background-color: #F6F6F6;
 	height: 100%;
-	padding-left: 10px;
-	padding-right: 10px;
+   padding-left: 5px;			
+	padding-right: 5px;
 }
+	 
 
 .sidebar{
  display:block; 
