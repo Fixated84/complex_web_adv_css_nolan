@@ -91,7 +91,7 @@ header('location:admin.php');
  <input class="form-control"  type="password"  name="password" placeholder="Password" </input> 
   
 </div><br>
-  <input type="submit" value="Submit" name="submit" class="btn btn-success"></input>
+  <input type="submit" value="Submit" name="submit" class="button"></input>
  <?php
 echo $message;
  ?>

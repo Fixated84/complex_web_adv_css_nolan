@@ -125,10 +125,10 @@ echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\
 <FORM class="formcentre" name="something" method="POST">
  
 <INPUT type="hidden" name="email" value=""  class="phone">
-<INPUT type="submit" value="Remove">
+<INPUT type="submit" value="Remove" class="negative button">
 
 
-<input name="Button2" type="button"   onClick="window.location.href='admin.php?logout=1'" value="Log Out"/>
+<input name="Button2" type="button" class="button"  onClick="window.location.href='admin.php?logout=1'" value="Log Out"/>
 </FORM>
 
 </div>
