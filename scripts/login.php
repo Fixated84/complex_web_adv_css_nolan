@@ -78,7 +78,7 @@ header('location:admin.php');
   <div class="mainbar"> 
  <h3>AllStyle Homes Mailing List Database </h3>   
 
-<form  class="formcentre" method="POST">
+<!--<form  class="formcentre" method="POST">
 	<label>Enter your login details:</label><br><br>
 	<div class="input-group input input-group-lg">
 		<span class="input-group-addon username" id="sizing-addon1">Username</span>
@@ -96,6 +96,23 @@ header('location:admin.php');
 echo $message;
  ?>
 
+</form>-->
+
+<form class="loginform" method="POST">
+  <fieldset class="account-info">
+    <label>
+      Username
+      <input type="text" name="username">
+    </label>
+    <label>
+      Password
+      <input type="password" name="password">
+    </label>
+  </fieldset>
+  <fieldset class="account-action">
+    <input class="btn" type="submit" name="submit" value="Login">
+     
+  </fieldset>
 </form>
 
 </div>
