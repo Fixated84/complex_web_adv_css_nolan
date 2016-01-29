@@ -105,8 +105,8 @@ echo  $message;
   <input type="submit" value="Submit" name="submit" class="button"></input>
   <input type="button" value="Login"  onClick="window.location.href='admin.php'" class="button"></input> 
  
-</form>
-
+</form><br><br>
+<!--<img class="displayed" src="../images/mailinglist.png"  alt="mailing list image" >-->
 </div>
   </div>
   
