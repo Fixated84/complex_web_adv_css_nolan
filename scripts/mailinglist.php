@@ -77,7 +77,7 @@ if ($updatedb) {
  <div class="contentwrapper">
   <div class="mainbar"> 
  <h3>AllStyle Homes Mailing List </h3>   
-
+<br>
 <form class="loginform" method="POST">
   <fieldset class="account-info" >
 	<label>Enter Full Name and Email:</label>
