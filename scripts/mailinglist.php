@@ -19,7 +19,7 @@ $updatedb = mysqli_query($con,$queryadd);
  mysqli_close($con);
 
 if ($updatedb) {
- $message = "<br><p class=\"animated bounce\">You have successfully added: " .$firstname . " " . $lastname . " to the mailing list.</p>" ;
+ $message = "<br><p class=\"animated bounce\">You have been successfully added to the mailing list.</p>" ;
 
  }else{
    $message = "<br><p> Your information could not be added to the mailing list.</p>";

@@ -109,7 +109,7 @@ echo $message;
       <input type="password" name="password">
     </label>
   </fieldset>
-  <fieldset class="account-action">
+  <fieldset class="account-action formcentre">
     <input class="btn" type="submit" name="submit" value="Login">
      
   </fieldset>

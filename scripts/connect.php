@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$db_username = "root";
-$db_password = "";
-$db_name = "mailinglist";
+$db_username = "tafehtml";
+$db_password = "!Not4real1";
+$db_name = "m_list";
 
 // Create connection
  

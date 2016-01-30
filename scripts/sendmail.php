@@ -1,31 +1,35 @@
 <?php
-$message = "<br><p></p><br>";
- 
+   
 include("connect.php");
-/*$firstname = (isset($_POST['firstname']) ? $_POST['firstname'] : null);*/
+
+ 
  if($_POST) {
+
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+$headers =  "From: AllStyle Homes <mailinglist@alltyleshomes.com.au>";
+
+ $users = "SELECT `firstname`, `email` FROM `emaillist`";
  
+
+$result = mysqli_query($con, $users);
+
+//while (($user = mysqli_fetch_assoc($users)) !== false){
+while($user = mysqli_fetch_array($result)) :
+
+ $body = "Hi, {$user['firstname']}\n\n{$message}\n\nUnsubscribe: http://www.fixated84.net/tafe_101_1/php/unsubscribe.php?email={$user['email']}";
+	 
+	 
+// echo $user[0] . " " . $subject ." ". $body ." ". $headers;
+		
+		//sends email to users in $user array
+		mail($user['email'], $subject, $body, $headers); 
+		
+		
+ endwhile;
+ } 
  
- $firstname = $_POST['firstname']; 
- $lastname = $_POST['lastname'];
- $email = $_POST['email'];
 
- 
- 
-$queryadd = "INSERT INTO emaillist (user_ID, firstname, lastname, email)
-VALUES (NULL,'$firstname', '$lastname', '$email')";
-$updatedb = mysqli_query($con,$queryadd);
-
- mysqli_close($con);
-
-if ($updatedb) {
- $message = "<br><p class=\"animated bounce\">You have successfully added: " .$firstname . " " . $lastname . " to the mailing list.</p>" ;
-
- }else{
-   $message = "<br><p> Your information could not be added to the mailing list.</p>";
-
- }
-}
 ?>
 
 
@@ -78,7 +82,7 @@ if ($updatedb) {
   <div class="mainbar"> 
  <h3>AllStyle Homes Mailing List </h3>   
 <br>
-<form class="loginform" method="POST">
+<form class="sendmail" method="POST">
   <fieldset class="account-info" >
 	 
    
@@ -88,7 +92,7 @@ if ($updatedb) {
     </label>
          <label>
       Message:   
-     <textarea   name="message" rows="25" cols="53"></textarea>
+     <textarea   name="message" rows="20" cols="59"></textarea>
   </label>
     
      
@@ -96,14 +100,12 @@ if ($updatedb) {
   
     <fieldset class="account-action" >
     <input type="submit" value="Send" name="submit" class="btn left">
+      <input type="button" value="Back" onClick="window.location.href='admin.php'" class="btn right">
   
   
      
   </fieldset>
 </form>
-<?php
-echo  $message;
-?>
  
 
 

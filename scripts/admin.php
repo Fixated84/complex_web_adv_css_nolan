@@ -129,7 +129,7 @@ echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\
  <div class="account-actionnew formcentre" >
 <INPUT type="submit" value="Remove" class="btn">
 
-<input type="button" value="Send Mail"  onClick="window.location.href='admin.php'" class="btn">
+<input type="button" value="Send Mail"  onClick="window.location.href='sendmail.php'" class="btn">
 <input name="Button" type="button" class="btn"  onClick="window.location.href='admin.php?logout=1'" value="Log Out"/>
 </div>
 </FORM>
