@@ -39,6 +39,11 @@ input {
   font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
+select{
+ border-radius: 5px;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;	
+}
 .account-info {
   padding: 20px 20px 0 20px;
    

@@ -2,36 +2,50 @@
    
 include("connect.php");
 
- 
- if($_POST) {
 
-$subject = $_POST['subject'];
+if($_POST){ 
+
+$to = 'slipped84@hotmail.com';
+$subject = 'AllStyle Homes Contact Form';
+
+ 
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$topic = $_POST['topic'];
 $message = $_POST['message'];
-$headers =  "From: AllStyle Homes <mailinglist@alltyleshomes.com.au>";
 
- $users = "SELECT `firstname`, `email` FROM `emaillist`";
+$body =  <<<EMAIL
+
+Email From: $name
+
+Email : $email 
+Topic :  $topic 
+
+Message: 
+$message
+
  
 
-$result = mysqli_query($con, $users);
+EMAIL;
 
-//while (($user = mysqli_fetch_assoc($users)) !== false){
-while($user = mysqli_fetch_array($result)) :
+ $header = "From: $email";
 
- $body = "Hi, {$user['firstname']}\n\n{$message}\n\nUnsubscribe: http://www.fixated84.net/redo/php/unsubscribe.php?email={$user['email']}";
-	 
-	 
-// echo $user[0] . " " . $subject ." ". $body ." ". $headers;
-		
-		//sends email to users in $user array
-		mail($user['email'], $subject, $body, $headers); 
-		
-		
- endwhile;
- } 
+
+if($name == '' || $email == '' || $message == ''){
+	 $feedback = 'Please fill out all the fields.';
+}else{
+	
+	mail($to, $subject, $body , $header);
+		 $feedback = 'Thanks for the email.';
+	}
  
+}
+
 
 ?>
-
+ 
+ 
 
 
 <!doctype html>
@@ -81,18 +95,34 @@ while($user = mysqli_fetch_array($result)) :
  <div class="contentwrapper">
   <div class="mainbar"> 
  <h3>AllStyle Homes Mailing List </h3>   
-<br>
+ 
+ 
+ 
 <form class="sendmail" method="POST">
   <fieldset class="account-info" >
 	 
    
      <label>
-      Subject:
-      <input  type="text"  name="subject" placeholder="Subject" required> 
+      Name:
+      <input  type="text"  name="name" placeholder="Name" required> 
     </label>
          <label>
+      Email:
+      <input  type="text"  name="email" placeholder="Email" required> 
+    </label>
+     <label>
+      Topic:<br>
+      <select id="topic" name="topic"> 
+    <option value="General">General</option>
+    <option value="House & Land Packages">House & Land Packages</option>
+    <option value="Display Homes">Display Homes</option>   
+      <option value="Other">Other</option>  
+        </select>
+      </label>
+      
+         <label>
       Message:   
-     <textarea   name="message" rows="20" cols="59"></textarea>
+     <textarea   name="message" rows="15" cols="59"></textarea>
   </label>
     
      
@@ -100,6 +130,7 @@ while($user = mysqli_fetch_array($result)) :
   
     <fieldset class="account-action" >
     <input type="submit" value="Send" name="submit" class="btn left">
+    
       <input type="button" value="Back" onClick="window.location.href='admin.php'" class="btn right">
   
   
