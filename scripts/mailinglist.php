@@ -78,37 +78,42 @@ if ($updatedb) {
   <div class="mainbar"> 
  <h3>AllStyle Homes Mailing List </h3>   
 
-<form method="POST" class="formcentre">
+<form class="loginform" method="POST">
+  <fieldset class="account-info" >
 	<label>Enter Full Name and Email:</label>
    
- 
-
+    <label>
+      First Name
+      <input  type="text"  name="firstname" placeholder="First Name" required> 
+    </label>
+    <label>
+      Last Name
+    <input  type="text"  name="lastname" placeholder="Last Name" required>
+     </label>
+         <label>
+      Last Name
+    <input type="text"  name="email" placeholder="Email" required >
+     </label>
+     
+  </fieldset>
+  
+    <fieldset class="account-action" >
+    <input type="submit" value="Submit" name="submit" class="btn left">
+  
+  <input type="button" value="Login"  onClick="window.location.href='admin.php'" class="btn right">
+     
+  </fieldset>
+</form>
 <?php
 echo  $message;
 ?>
  
 
-	<div  >
-  
- <span>First Name:</span>
- <input  type="text"  name="firstname" placeholder="First Name" required> </input>
- <br>
-<span>Last Name:</span>
- <input  type="text"  name="lastname" placeholder="Last Name" required> </input> 
- 
-	<br>
-<span>Email:</span>
- <input type="text"  name="email" placeholder="Email" required ></input> 
-  
- <br>
-<br>
-  <input type="submit" value="Submit" name="submit" class="button"></input>
-  <input type="button" value="Login"  onClick="window.location.href='admin.php'" class="button"></input> 
- 
-</form><br><br>
+
+<br><br>
 <!--<img class="displayed" src="../images/mailinglist.png"  alt="mailing list image" >-->
 </div>
-  </div>
+  
   
   <div class="sidebar"> <br>
 
@@ -135,9 +140,9 @@ echo  $message;
  
    <div class="footer">  <a href="../pages/privacy.html" >© 2012 AllStyle Homes - Copyright and Privacy Information</a> </div>
 
- 
+  </div>
 <!--</section>-->
-</div>
+ 
 <script>
  
 var effectimg = document.getElementById("effectimg");
