@@ -1,33 +1,33 @@
- <?php
- session_start();
-if (!isset($_SESSION['username'])) {
- header('location:login.php');
-}
-
- include("connect.php");
-
+<?php
+$message = "<br><p></p><br>";
  
-   if($_POST) {
+include("connect.php");
+/*$firstname = (isset($_POST['firstname']) ? $_POST['firstname'] : null);*/
+ if($_POST) {
+ 
+ 
+ $firstname = $_POST['firstname']; 
+ $lastname = $_POST['lastname'];
  $email = $_POST['email'];
- 
-$queryremove = "DELETE FROM emaillist WHERE (`email` = '$email')";	 
 
-  
-$updatedb = mysqli_query($con,$queryremove);
+ 
+ 
+$queryadd = "INSERT INTO emaillist (user_ID, firstname, lastname, email)
+VALUES (NULL,'$firstname', '$lastname', '$email')";
+$updatedb = mysqli_query($con,$queryadd);
 
  mysqli_close($con);
-  
- 
-   }
- 
- if(isset($_GET['logout'])) {
- session_unset(); 
 
-// destroy the session 
-session_destroy(); 
-header('Location:login.php');
+if ($updatedb) {
+ $message = "<br><p class=\"animated bounce\">You have successfully added: " .$firstname . " " . $lastname . " to the mailing list.</p>" ;
+
+ }else{
+   $message = "<br><p> Your information could not be added to the mailing list.</p>";
+
+ }
 }
- ?>
+?>
+
 
 
 <!doctype html>
@@ -38,7 +38,7 @@ header('Location:login.php');
 <title>AllStyle Homes</title>
 <link href="../css/styles.css" rel="stylesheet" type="text/css">
  <link href="../css/animate.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="../css/css3buttons.css" media="screen"> 
+ <link rel="stylesheet" href="../css/css3buttons.css" media="screen"> 
  
 </head>
 
@@ -76,66 +76,41 @@ header('Location:login.php');
 <!--content wrapper for mainbar and sidebar-->
  <div class="contentwrapper">
   <div class="mainbar"> 
- <h3>AllStyle Homes Mailing List Database </h3>   
-
-
-
-<table class="maillist">
-<tr>
-<th>First Name</th>
-<th>Last Name</th>
-<th>Email</th>
-<th>Remove</th >
-<tr>
+ <h3>AllStyle Homes Mailing List </h3>   
+<br>
+<form class="loginform" method="POST">
+  <fieldset class="account-info" >
+	 
+   
+     <label>
+      Subject:
+      <input  type="text"  name="subject" placeholder="Subject" required> 
+    </label>
+         <label>
+      Message:   
+     <textarea   name="message" rows="25" cols="53"></textarea>
+  </label>
+    
+     
+  </fieldset>
+  
+    <fieldset class="account-action" >
+    <input type="submit" value="Send" name="submit" class="btn left">
+  
+  
+     
+  </fieldset>
+</form>
 <?php
-
-include("connect.php");
-
-$query = "SELECT * FROM emaillist WHERE 1";
-$result = mysqli_query($con,$query);
-
- 
- while($row = mysqli_fetch_array($result)) :
- 
- 
- 
- $firstname = $row['firstname'];
-$lastname = $row['lastname'];
-$email = $row['email'];
- 
-echo "<tr id=\"tr1\">";
-
-echo "<td>".$row['firstname']."</td>";
-echo "<td>".$row['lastname']."</td>";
-echo "<td>".$row['email']."</td>";
- 
- 
-echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\1\" onclick=\"myfunc(this);\" onChange=\"cbChange(this)\"></td>";
- endwhile;
- 
- 
- 
- 
+echo  $message;
 ?>
-
-</table>
-
-
-  <!--onsubmit="goToPage(this.url.value);--><br><br>
-<FORM    name="something" method="POST">
  
-<INPUT type="hidden" name="email" value=""  class="phone">
 
- <div class="account-actionnew formcentre" >
-<INPUT type="submit" value="Remove" class="btn">
 
-<input type="button" value="Send Mail"  onClick="window.location.href='admin.php'" class="btn">
-<input name="Button" type="button" class="btn"  onClick="window.location.href='admin.php?logout=1'" value="Log Out"/>
+<br><br>
+<!--<img class="displayed" src="../images/mailinglist.png"  alt="mailing list image" >-->
 </div>
-</FORM>
-
-</div>
- 
+  
   
   <div class="sidebar"> <br>
 
@@ -157,14 +132,14 @@ echo "<td> <input type=\"checkbox\" class=\"remove\" name=\"remove[]\" value=\"\
 
         <a  href="https://greatstartgrant.osr.qld.gov.au/quick-calculate.php" target="_blank" ><img class="displayed"  src="../images/loan.PNG" alt="Loan Calculator" height="130" width="180"></a>     
     </div>
-    </div>
-  
+   
+  </div>
  
    <div class="footer">  <a href="../pages/privacy.html" >© 2012 AllStyle Homes - Copyright and Privacy Information</a> </div>
 
- 
+  </div>
 <!--</section>-->
-</div>
+ 
 <script>
  
 var effectimg = document.getElementById("effectimg");
@@ -185,36 +160,6 @@ window.onload = function(){
  
 };
  </script>
- 
- <script type='text/javascript'>//<![CDATA[ 
-window.onload=function(){
-var btns = document.querySelectorAll('.remove'),
-    phone = document.querySelector('.phone');
-
-// looping through the nodelist and attaching eventlisteners
-[].forEach.call(btns, function(btn) {
-    btn.addEventListener('click', function(event) {
-        // fetching the phone number
-		
-		 
-        var selectedPhone = event.target.parentNode.previousSibling.textContent;
-        phone.value = selectedPhone; //setting the value 
-		//alert(selectedPhone);
-    }, false);
-});
-}//]]>  
- 
-</script>
-
-<SCRIPT type="text/javascript">
-function goToPage(url)
-{
-var initial = "localhost/scripts/removemail";
-var extension = ".php?email=";
-
-document.something.action=initial+extension+url;
-}
-</SCRIPT>
 
 </body>
 </html>

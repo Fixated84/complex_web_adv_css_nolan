@@ -55,6 +55,24 @@ input {
   padding: 20px;
  
 }
+.account-actionnew {
+  background: #F6F6F6;
+   
+  
+ 
+}
+
+.account-actionnew .btn {
+  background: linear-gradient(#49708f, #293f50);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+   
+  
+  padding: 8px 16px;
+  
+}
+
 .account-action .btn {
   background: linear-gradient(#49708f, #293f50);
   border: 0;
@@ -63,8 +81,6 @@ input {
   font-weight: bold;
   
   padding: 8px 16px;
- 
- 
   
 }
 
