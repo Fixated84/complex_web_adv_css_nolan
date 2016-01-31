@@ -68,9 +68,13 @@ Click <a href="../scripts/mailinglist.php" class="links">here</a> to sign up for
  <br>
  
  <script type="text/javascript"> 
- function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(-24.8520522,152.39065619999997),mapTypeId: google.maps.MapTypeId.ROADMAP};
- map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-24.8520522, 152.39065619999997)});
- infowindow = new google.maps.InfoWindow({content:"<b>AllStyle Homes</b><br/>255 Serenity Drive Bundaberg QLD 4670<br/>4670 Bundaberg " });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+ function init_map(){
+ var myOptions = {zoom:16,center:new google.maps.LatLng(-24.8520522,152.39065619999997),mapTypeId: google.maps.MapTypeId.ROADMAP};
+ map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+ marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-24.8520522, 152.39065619999997)});
+ infowindow = new google.maps.InfoWindow({content:"<b>AllStyle Homes</b><br/>255 Serenity Drive Bundaberg QLD 4670<br/>4670 Bundaberg " });
+ google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+ infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
  </script>
     
     

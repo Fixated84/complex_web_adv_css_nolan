@@ -167,35 +167,7 @@ window.onload = function(){
 };
  </script>
  
- <script type='text/javascript'>//<![CDATA[ 
-window.onload=function(){
-var btns = document.querySelectorAll('.remove'),
-    phone = document.querySelector('.phone');
-
-// looping through the nodelist and attaching eventlisteners
-[].forEach.call(btns, function(btn) {
-    btn.addEventListener('click', function(event) {
-        // fetching the phone number
-		
-		 
-        var selectedPhone = event.target.parentNode.previousSibling.textContent;
-        phone.value = selectedPhone; //setting the value 
-		//alert(selectedPhone);
-    }, false);
-});
-}//]]>  
  
-</script>
-
-<SCRIPT type="text/javascript">
-function goToPage(url)
-{
-var initial = "localhost/scripts/removemail";
-var extension = ".php?email=";
-
-document.something.action=initial+extension+url;
-}
-</SCRIPT>
 
 </body>
 </html>
