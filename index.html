@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AllStyle Homes</title>
-<link href="css/styles.css" rel="stylesheet" type="text/css">
+ 
+
 <link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+
 <div class="wrapper">
 <!--<header>-->
 	 <div class="headerwrapper">
@@ -96,6 +99,20 @@ window.onload = function(){
     }	);  
  
  };
+ </script>
+ 
+ <script type="text/javascript">
+// window.onload = function(){
+ var day = new Date();
+  var hr = day.getHours();
+  if ((hr == 18) ||(hr == 19) || (hr == 20) || (hr == 21) | (hr == 22)) {
+ 
+ var cssnew = document.querySelector("link[href='css/styles.css']");
+ 
+ cssnew.setAttribute("href", "css/stylesnew.css");
+ }
+  
+ 
  </script>
 
 
