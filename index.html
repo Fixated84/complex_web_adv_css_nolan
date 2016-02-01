@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AllStyle Homes</title>
+<link rel="shortcut icon" href="images/icon.ico">
  
-
-<link href="css/animate.css" rel="stylesheet" type="text/css">
 <link href="css/styles.css" rel="stylesheet" type="text/css">
+ <link href="css/animate.css" rel="stylesheet" type="text/css"> 
+
 
 <script type = "text/javascript" 
          src = "js/jquery.min.js"></script>
+         
+
 </head>
 
 <body>
@@ -108,23 +111,30 @@ window.onload = function(){
 // window.onload = function(){
  var day = new Date();
   var hr = day.getHours();
-  if ((hr == 16) ||(hr == 19) || (hr == 20) || (hr == 21) | (hr == 22)) {
+  if ((hr == 17) ||(hr == 18) || (hr == 19) || (hr == 21) | (hr == 23)) {
  
  var cssnew = document.querySelector("link[href='css/styles.css']");
  
  cssnew.setAttribute("href", "css/stylesnew.css");
- $('body:before').css('margin-left', '-18%');
+ 
+ 
  }
   
  
  </script>
  
-  <script>
-         $(document).ready(function() {
-          
-           // $('body:before').css('margin-left', '-18%');
-         });
-      </script>
+ 
+ <script type="text/javascript">
+$(document).ready(function() {
+	
+	 <!-- alert("window is loaded");-->
+	$('h3').click(function() { 
+    // $('body:before').css('margin-left', '-18%');
+	// $('h3').css('color','yellow');
+	});
+	  
+});
+</script> 
   
 
 
