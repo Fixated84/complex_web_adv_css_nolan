@@ -122,7 +122,7 @@ if($name == '' || $email == '' || $message == ''){
       
          <label>
       Message:   
-     <textarea   name="message" rows="15" cols="59"></textarea>
+     <textarea   name="message" rows="14" cols="59"></textarea>
   </label>
     
      

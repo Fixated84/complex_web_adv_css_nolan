@@ -95,7 +95,7 @@ while($user = mysqli_fetch_array($result)) :
     </label>
          <label>
       Message:   
-     <textarea   name="message" rows="20" cols="59"></textarea>
+     <textarea   name="message" rows="18" cols="59"></textarea>
   </label>
     
      
